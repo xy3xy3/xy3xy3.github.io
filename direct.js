@@ -219,10 +219,14 @@ function iframe(src) {
   $("div").html(
     '<iframe src="' +
       src +
-      '" width="100%"  allow="camera;microphone" height="' +
-      ($(window).height() - 5) +
+      '" width="100%" frameborder=0 allow="camera;microphone" scrolling=no height="' +
+      $(window).height() +
       "px" +
       '" style="border: 0"></iframe>'
   );
   $(window).resize();
 }
+//检测窗口大小变化就resize
+$(window).resize(function () {
+  $("iframe").height($(window).height());
+});
