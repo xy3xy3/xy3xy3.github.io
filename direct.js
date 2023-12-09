@@ -220,7 +220,7 @@ function iframe(src) {
     '<iframe src="' +
       src +
       '" width="100%" frameborder=0 allow="camera;microphone" height="' +
-      $(window).height() +
+      ($(window).height()-3) +
       "px" +
       '" style="border: 0"></iframe>'
   );
@@ -228,5 +228,5 @@ function iframe(src) {
 }
 //检测窗口大小变化就resize
 window.addEventListener("resize", function () {
-  $("iframe").height($(window).height());
+  $("iframe").height($($(window).height() - 3));
 });
