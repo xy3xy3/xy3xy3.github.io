@@ -219,8 +219,8 @@ function iframe(src) {
   $("div").html(
     '<iframe src="' +
       src +
-      '" width="100%" frameborder=0 allow="camera;microphone" height="' +
-      ($(window).height()-3) +
+      '" width="100%" frameborder="0" scrolling="no" allow="camera;microphone" height="' +
+      ($(window).height() - 3) +
       "px" +
       '" style="border: 0"></iframe>'
   );
